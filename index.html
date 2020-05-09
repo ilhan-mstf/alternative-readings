@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Alternative Readings</title>
+  <meta name="description" content=""/>
+
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      font-family: monospace;
+    }
+    section {
+      width: 600px;
+      padding: 40px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border: 1px solid #000;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      left: 10px;
+      right: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      max-width: 100%;
+      max-height: 100px;
+      border: 1px solid #ccc;
+    }
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <section data-order="1" class="">
+    <h1>Linear Reading</h1>
+    <p>Hebele hübele, hebele hübele</p>
+    <button class="next" onclick="next(1,2)">Next</button>
+  </section>
+
+  <section data-order="2" class="hidden">
+    <h1>Could there be another way of reading?</h1>
+    <button class="next" onclick="next(2,3)">Next</button>
+  </section>
+
+  <section data-order="3" class="hidden">
+    <h1>Let's try</h1>
+    <button class="next" onclick="next(3,4)">Next</button>
+  </section>
+
+  <section data-order="4" class="hidden">
+    <h1>Find a text that you can not make sense</h1>
+    <p>(in case, you can refer to Thrump's speech.)</p>
+    <button class="next" onclick="next(4,5)">Next</button>
+  </section>
+
+  <section data-order="5" class="hidden">
+    <h1>Copy paste it here we are going to make sense of it by math and algorithms</h1>
+    <textarea maxlength="1000">So I asked Bill a question some of you are thinking of if you're into that world, which I find to be pretty interesting. So, supposing we hit the body with a tremendous, whether its ultraviolet or just very powerful light, and I think you said, that hasn't been checked but you're gonna test it. And then I said, supposing it brought the light inside the body, which you can either do either through the skin or some other way, and I think you said you're gonna test that too, sounds interesting. And I then I see the disinfectant, where it knocks it out in one minute, and is there a way you can do something like that by injection inside, or almost a cleaning. Because you see it gets in the lungs, and it does a tremendous number on the lungs. So it'd be interesting to check that. So you're going to have to use medical doctors, but it sounds interesting to me, so we'll see. But the whole concept of the light, the way it goes in one minute, that's pretty powerful.</textarea>
+    <a href="https://www.businessinsider.com/trump-suggests-infecting-disinfectant-video-transcript-2020-4"></a>
+    <button class="next" onclick="next(5,6)">Next</button>
+  </section>
+
+  <section data-order="6" class="hidden">
+    <h1>Now, we are going to select a mathematical sequence or formula.</h1>
+    <button class="next" onclick="next(6,7)">Fibonacci sequence</button>
+  </section>
+
+  <!-- Fibonacci -->
+  <section data-order="7" class="hidden">
+    <h1>Fibonacci sequence</h1>
+    <p>Each number in this sequence is the sum of the two preceding ones, starting from 0 and 1. That is,</p>
+    <p class="text-center">\( F_0 = 0,\) \(F_1 = 1, \)</p>
+    <p class="text-center">\( F_n = F_{n-1} + F_{n-2}, \) for \( n > 1. \)</p>
+    <p>The beginning of the sequence is thus: \( 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... \)</p>
+    <button class="next" onclick="next(7,6)">Back</button>
+    <button class="next" onclick="finalize(7)">Next</button>
+  </section>
+
+  <section class="hidden" id="final">
+    <h1>Does it make sense now?</h1>
+    <div></div>
+    <button class="next" onclick="">Yes</button>
+    <button class="next" onclick="">No</button>
+  </section>
+
+  <footer>
+    <span>Alternative Readings, by Mustafa İlhan, 2020</span> 
+    <a href="" target="_blank">Read More</a>
+    <a href="" target="_blank">Other Projects</a>
+  </footer>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    function next(curr, nxt) {
+      hideCurrent(curr)
+
+      let nxtSec = document.querySelector(`section[data-order='${nxt}']`);
+      nxtSec.classList.remove('hidden');
+    }
+
+    function finalize(curr) {
+      hideCurrent(curr)
+
+      let finalSec = document.getElementById('final');
+      finalSec.classList.remove('hidden');
+    }
+
+    function hideCurrent(curr) {
+      let currSec = document.querySelector(`section[data-order='${curr}']`);
+      currSec.classList.add('hidden');
+    }
+
+  </script>
+</body>
+</html>
