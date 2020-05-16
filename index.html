@@ -6,15 +6,22 @@
   <title>Algorithmic Readings</title>
   <meta name="description" content=""/>
 
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet">
   <style type="text/css">
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
-      height: 100%;
     }
     body {
-      font-family: monospace;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    }
+    h1 {
+      font-family: 'Alegreya', monospace;
+      font-weight: 500;
     }
     section {
       width: 600px;
@@ -34,7 +41,7 @@
     }
     textarea {
       width: 100%;
-      height: 80px;
+      height: 100px;
       max-width: 100%;
       max-height: 100px;
       border: 1px solid #ccc;
@@ -67,20 +74,29 @@
       margin: 0 auto;
       display: block;
     }
+    .v-hidden {
+      visibility: hidden;
+    }
+    .next {
+      float: right;
+    }
   </style>
 </head>
 <body>
   <section data-order="1" class="">
     <h1>How do you read a text?</h1>
-    <p>It is also important to note that all reading is not the same. Reading Tolstoy is not the same as reading a tweet or a restaurant menu [<a target="_blank" href="https://quod.lib.umich.edu/c/cb/mpub9944117/1:6/--reading-in-a-digital-age?rgn=div1;view=fulltext">1</a>].</p>
-    <button class="next" onclick="next(1,2)">Next</button>
+    <p>From left to right, or right to left?</p>
+    <p>One by one or scanning the whole text, or just looking at images?</p>
+    <p>It is important to note that all reading is not the same. Namely, reading Tolstoy is not the same as reading a tweet or a restaurant menu [<a target="_blank" href="https://quod.lib.umich.edu/c/cb/mpub9944117/1:6/--reading-in-a-digital-age?rgn=div1;view=fulltext">1</a>].</p>
+    <button class="v-hidden" onclick="next(1,1)">&#8249; Back</button>
+    <button class="next" onclick="next(1,2)">Next &#8250;</button>
   </section>
 
   <section data-order="2" class="hidden">
     <h1>Linear Reading</h1>
-    <p>In a linear, written text, the reader makes sense of the text according to the consecutive arrangement of the words [<a target="_blank" href="https://www.wikiwand.com/en/Reading_path">2</a>].</p>
-    <button class="next" onclick="next(2,1)">Back</button>
-    <button class="next" onclick="next(2,3)">Next</button>
+    <p>In linear reading, the reader makes sense of the text according to the consecutive arrangement of the words [<a target="_blank" href="https://www.wikiwand.com/en/Reading_path">2</a>].</p>
+    <button class="" onclick="next(2,1)">&#8249; Back</button>
+    <button class="next" onclick="next(2,3)">Next &#8250;</button>
   </section>
 
   <section data-order="3" class="hidden">
@@ -88,43 +104,51 @@
     <p>Yes, absolutely! Skimming, scanning, searching a keyword in a text, looking titles, or table of contents, looking images and reading their captions, etc, etc.</p>
     <p>However, what I question is not these. What I question is,</p>
     <p>Could there be <em>really</em> another way of reading <em><strong>in the age of algorithms</strong></em>?</p>
-    <p>This work of art examines the alternative readings by using algorithms to our effort to make sense the text. It follows the path of dada poetry in the sense that breaking the structure and meaning of the text, but also, it questions the possibility of interaction of algorithms and the stucture, and the meaning. how can it be enhanced or how it can be broken by the algorithms</p>
-    <button class="next" onclick="next(3,2)">Back</button>
-    <button class="next" onclick="next(3,4)">Next</button>
+    <p>This work of art examines the alternative readings 'enhanced' by algorithms to make sense a text. It follows the path of dada poetry in the sense that breaking the structure and meaning of the text, but also, it questions the possibility of interaction of algorithms and the stucture, and the meaning. How can the meaning be enhanced or how it can be broken by the algorithms?</p>
+    <button class="" onclick="next(3,2)">&#8249; Back</button>
+    <button class="next" onclick="next(3,4)">Next &#8250;</button>
   </section>
 
   <section data-order="4" class="hidden">
-    <h1>Algorithm</h1>
-    <p></p>
-    <button class="next" onclick="next(4,5)">Next</button>
+    <h1>What is an Algorithm?</h1>
+    <p>An algorithm is a <em>list of instructions</em> to follow in order to solve a problem or to accomplish a task.</p>
+    <button class="" onclick="next(4,3)">&#8249; Back</button>
+    <button class="next" onclick="next(4,5)">Next &#8250;</button>
   </section>
 
   <section data-order="5" class="hidden">
-    <h1>Let's try</h1>
-    <button class="next" onclick="next(5,6)">Next</button>
+    <h1>Ready? We are going to make an experiment.</h1>
+    <p>We are going to discover alternative ways of reading. I hope that you will move forward this approach. So, <em>let's get started</em>.</p>
+    <button class="" onclick="next(5,4)">&#8249; Back</button>
+    <button class="next" onclick="next(5,6)">Next &#8250;</button>
   </section>
 
   <section data-order="6" class="hidden">
-    <h1>Find a text (that you can not make sense)</h1>
-    <p>(In case, you can refer to <a target="_blank" href="https://www.businessinsider.com/trump-suggests-infecting-disinfectant-video-transcript-2020-4">Thrump's disinfectant speech</a>.)</p>
-    <button class="next" onclick="next(6,7)">Next</button>
+    <h1>Find a text</h1>
+    <!--<p>(In case, you can refer to <a target="_blank" href="https://www.businessinsider.com/trump-suggests-infecting-disinfectant-video-transcript-2020-4">Thrump's disinfectant speech</a>, because it is so hard to make sense his words.)</p>-->
+    <button class="" onclick="next(6,5)">&#8249; Back</button>
+    <button class="next" onclick="next(6,7)">Next &#8250;</button>
   </section>
 
   <section data-order="7" class="hidden">
-    <h1>Copy paste it here we are going to make sense of it by math and algorithms</h1>
+    <h1>Copy paste the text below</h1>
     <textarea maxlength="5000" id="textToRead">So I asked Bill a question some of you are thinking of if you're into that world, which I find to be pretty interesting. So, supposing we hit the body with a tremendous, whether its ultraviolet or just very powerful light, and I think you said, that hasn't been checked but you're gonna test it. And then I said, supposing it brought the light inside the body, which you can either do either through the skin or some other way, and I think you said you're gonna test that too, sounds interesting. And I then I see the disinfectant, where it knocks it out in one minute, and is there a way you can do something like that by injection inside, or almost a cleaning. Because you see it gets in the lungs, and it does a tremendous number on the lungs. So it'd be interesting to check that. So you're going to have to use medical doctors, but it sounds interesting to me, so we'll see. But the whole concept of the light, the way it goes in one minute, that's pretty powerful.</textarea>
-    <p><a target="_blank" href="https://www.businessinsider.com/trump-suggests-infecting-disinfectant-video-transcript-2020-4">Thrump's disinfectant speech</a></p>
-    <button class="next" onclick="next(7,8)">Next</button>
+    <!--<p><a target="_blank" href="https://www.businessinsider.com/trump-suggests-infecting-disinfectant-video-transcript-2020-4">Thrump's disinfectant speech</a></p>-->
+    <p></p>
+    <button class="" onclick="next(7,6)">&#8249; Back</button>
+    <button class="next" onclick="next(7,8)">Next &#8250;</button>
   </section>
 
   <section data-order="8" class="hidden">
-    <h1>Now, we are going to select a mathematical sequence or formula.</h1>
-    <p></p>
-    <button class="next" onclick="next(8,7)">Back</button>
-    <button class="next" onclick="next(8,9)">Fibonacci sequence</button>
-    <button class="next" onclick="next(8,10)">Triangle Numbers</button>
-    <button class="next" onclick="next(8,11)">Random serie</button>
-    <button class="next" onclick="next(8,12)">Back propogation</button>
+    <h1>Now, select an algorithm</h1>
+    <p>Don't panic, you will see the explanation.</p>
+    <p>All of them summarizes the given text. We are going to summarize each text with these ones.</p>
+    <p>Ordered by easy to hard</p>
+    <button class="" onclick="next(8,7)">&#8249; Back</button>
+    <button class="" onclick="next(8,9)">Fibonacci Sequence</button>
+    <button class="" onclick="next(8,10)">Triangle Numbers</button>
+    <button class="" onclick="next(8,11)"></button>
+    <button class="" onclick="next(8,12)">Back Propogation</button>
   </section>
 
   <!-- Fibonacci -->
@@ -134,8 +158,8 @@
     <p class="text-center">\( F_0 = 0,\) \(F_1 = 1, \)</p>
     <p class="text-center">\( F_n = F_{n-1} + F_{n-2}, \) for \( n > 1. \)</p>
     <p>The beginning of the sequence is thus: \( 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... \)</p>
-    <button class="next" onclick="next(9,8)">Back</button>
-    <button class="next" onclick="finalize(9);fibonacci();">Next</button>
+    <button class="" onclick="next(9,8)">&#8249; Back</button>
+    <button class="next" onclick="finalize(9);fibonacci();">Next &#8250;</button>
   </section>
 
   <section data-order="10" class="hidden">
@@ -145,17 +169,31 @@
     <p>The beginning of the sequence is thus: \( 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ... \)</p>
     <img src="img/First_six_triangular_numbers.svg.png" height="150">
     <p></p>
-    <button class="next" onclick="next(10,8)">Back</button>
-    <button class="next" onclick="finalize(10);">Next</button>
+    <button class="" onclick="next(10,8)">&#8249; Back</button>
+    <button class="next" onclick="finalize(10);triangle();">Next &#8250;</button>
+  </section>
+
+  <section data-order="11" class="hidden">
+    <h1></h1>
+    <p></p>
+    <button class="" onclick="next(11,8)">&#8249; Back</button>
+    <button class="next" onclick="finalize(10);">Next &#8250;</button>
+  </section>
+
+  <section data-order="12" class="hidden">
+    <h1>Back Propogation</h1>
+    <p></p>
+    <button class="" onclick="next(12,8)">&#8249; Back</button>
+    <button class="next" onclick="finalize(10);">Next &#8250;</button>
   </section>
 
   <section data-order="-1" class="hidden" id="final">
-    <h1>Does it make sense now?</h1>
+    <h1>Does it make sense?</h1>
     <div id="textContainer"></div>
     <p></p>
-    <button class="next" onclick="next(-1,7)">I want to try again</button>
-    <button class="next" onclick="">Share</button>
-    <!-- Download image -->
+    <button class="" onclick="next(-1,7)">I want to try others</button>
+    <button class="" onclick="">Share</button>
+    <!-- TODO Download image -->
   </section>
 
   <footer>
@@ -195,16 +233,25 @@
       return document.getElementById('textToRead').value;
     }
 
-    function fibonacci () {
+    function applySequence (seq) {
       let textToRead = getEnteredText();
       let tokens = textToRead.split(" ");
-      let seq = new Set(getFibonacciSequence(19));
       for (let i = 0, ii = tokens.length; i < ii; i++) {
         if (!seq.has(i)) {
           tokens[i] = `<span class="disable">${tokens[i]}</span>`;
         }
       }
       renderText(tokens);
+    }
+
+    function fibonacci () {
+      let seq = new Set(getFibonacciSequence(19));
+      applySequence(seq);
+    }
+
+    function triangle () {
+      let seq = new Set(getTriangleSequence(50));
+      applySequence(seq);
     }
 
     function getFibonacciSequence (num) {
@@ -219,6 +266,14 @@
         num--;
       }
 
+      return seq;
+    }
+
+    function getTriangleSequence (num) {
+      let seq = [];
+      for (let i = 0; i < num; i++) {
+        seq.push((i * (i+1)) / 2);
+      }
       return seq;
     }
   </script>
